@@ -1,28 +1,28 @@
 #pragma once
 #include <string>
+#include "Titular.hpp"
 
-class Conta  //criando um TIPO DE VARIAVEL: Nome da minha classe
+
+class Conta:public Titular  //criando um TIPO DE VARIAVEL: Nome da minha classe
 {
+public:
+	static int NumeroDeContas;
+
 private:
+	
+	static std::string numero;
+	static Titular titular;
+	float saldo;
 	static int numeroDeContas;
 
 public:
-	//static void getNumeroDeContas;
-
-private:	
-	std::string numero;
-	std::string cpfTitular;
-	std::string nomeTitular;
-	float saldo;
-
-public:
-	Conta(std::string numero, std::string cpfTitular, std::string nomeTitular);//Construtor
+	Conta(std::string numero, Titular titular);//Construtor
+	~Conta();//Destrutor
 
 	void sacar(float valorAsacar);
 	void depositar(float valorADepositar);
 	
 	float getSaldo() const;
-	std::string getNomeTitular();
-	std::string getCpfTitular();
-
+	int getNumeroDeContas();
+	
 };
