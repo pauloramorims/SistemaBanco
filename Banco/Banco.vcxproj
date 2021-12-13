@@ -140,13 +140,21 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Conta.cpp" />
+    <ClCompile Include="ContaCorrente.cpp" />
+    <ClCompile Include="ContaPoupanca.cpp" />
     <ClCompile Include="Cpf.cpp" />
+    <ClCompile Include="funcionario.cpp" />
     <ClCompile Include="Origem.cpp" />
+    <ClCompile Include="pessoa.cpp" />
     <ClCompile Include="Titular.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Conta.hpp" />
+    <ClInclude Include="ContaCorrente.hpp" />
+    <ClInclude Include="ContaPoupanca.hpp" />
     <ClInclude Include="Cpf.hpp" />
+    <ClInclude Include="funcionario.hpp" />
+    <ClInclude Include="pessoa.hpp" />
     <ClInclude Include="Titular.hpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

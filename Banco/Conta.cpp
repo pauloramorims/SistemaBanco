@@ -11,9 +11,9 @@ Conta::Conta(std::string numero, Titular titular):  //LISTA DE INICIALIZAÇÃO (IN
 
 Conta::~Conta()
 {
-	std::cout << "Estou aqui" << std::endl;
 	numeroDeContas--;
 }
+
 
 void Conta::sacar(float valorAsacar)
 {
@@ -22,13 +22,19 @@ void Conta::sacar(float valorAsacar)
 		std::cout << "Valor digitado invalido" << std::endl;
 		return;
 	}
-	if (valorAsacar > saldo)
+
+	float tarifaDeSaque = valorAsacar * taxaDeSaque();
+
+	if (valorAsacar+tarifaDeSaque > saldo)
 	{
 		std::cout << "Saldo insuficiente" << std::endl;
 		return;
 	}
 
-	saldo -= valorAsacar;
+
+	saldo -= valorAsacar + tarifaDeSaque;
+	std::cout << "O valor de " << "R$" << valorAsacar << " foi sacado com sucesso" << std::endl;
+	std::cout << std::endl;
 }
 
 void Conta::depositar(float valorADepositar)
@@ -39,6 +45,8 @@ void Conta::depositar(float valorADepositar)
 		return;
 	}
 	saldo += valorADepositar;
+	std::cout << nome << "!" << std::endl << "R$" << valorADepositar << " acaba de ser depositado com sucesso em sua conta" << std::endl;
+	std::cout << std::endl;
 }
 
 float Conta::getSaldo() const {

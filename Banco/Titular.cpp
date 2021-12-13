@@ -1,21 +1,11 @@
 #include "Titular.hpp"
+#include "Cpf.hpp"
 #include <iostream>
 
-Titular::Titular(Cpf cpf, std::string nome) : 
-	Cpf(cpf), nome(nome)
+Titular::Titular(Pessoa pessoa)
+	:Pessoa(pessoa)
 {
-	verificaTamanhoDoNome();
 }
 
-void Titular:: verificaTamanhoDoNome()
-{
-	if (nome.size() < 5)
-	{
-		std::cout << "Tamanho invalido" << std::endl;
-	}
-}
 
-std::string Titular::getNome()
-{
-	return nome;
-}
+
