@@ -4,5 +4,9 @@
 Funcionario::Funcionario(Cpf cpf, std::string nome, float salario)
 	: Pessoa(cpf, nome), salario(salario)
 {
-	std::cout << "Construtor de FUNCIONARIO" << std::endl;
+}
+
+float  Funcionario::getSalario()
+{
+	return salario+bonificacao();
 }

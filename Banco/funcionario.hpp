@@ -5,10 +5,11 @@
 
 class Funcionario : public Pessoa
 {
-private:
+protected:
 	float salario;
 public:
 	Funcionario(Cpf cpf, std::string nome, float salario);
-	
+	float getSalario();
+	virtual float bonificacao() = 0;
 };
 

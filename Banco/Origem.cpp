@@ -5,6 +5,7 @@
 #include "ContaPoupanca.hpp"
 #include "Titular.hpp"
 #include "Cpf.hpp"
+#include "Caixa.hpp"
 
 using namespace std;
 
@@ -46,5 +47,12 @@ int main()
 	cout << endl;
 
 	cout << "Total de contas cadastradas: " << umaConta.getNumeroDeContas() << endl;
+
+
+	Caixa caixa(Cpf("051-731-691-92"), "Paulo Ricardo", 800);
+
+	cout << caixa.getNome() << " receberah " << caixa.getSalario();
+
+
 
 }
